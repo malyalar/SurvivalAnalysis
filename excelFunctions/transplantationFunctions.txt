@@ -1,0 +1,16 @@
+//A function that takes x number of inclusion criteria, and provides the first date of an adverse event AFTER the date of transplant.
+//100000 is used as a proxy for "a long time after." It is basically a way of inputting a dummy date in lieu of a real one if no adverse event occurred.
+
+=IF(  
+   MIN(
+IF(AND($DB$2=1, SUM(D2)>IF($DA$2=1, AF2,B2)), SUM(D2),100000),     
+IF(AND($DC$2=1, SUM(F2)>IF($DA$2=1, AF2,B2)), SUM(F2),100000),      
+IF(AND($DD$2=1, SUM(P2)>IF($DA$2=1, AF2,B2)), SUM(P2),100000),     
+IF(AND($DE$2=1, SUM(L2)>IF($DA$2=1, AF2,B2)), SUM(L2),100000),   
+IF(AND($DF$2=1, SUM(J2)>IF($DA$2=1, AF2,B2)), SUM(J2),100000),    
+IF(AND($DG$2=1, SUM(T2)>IF($DA$2=1, AF2,B2)), SUM(T2),100000),        
+IF(AND($DH$2=1, SUM(N2)>IF($DA$2=1, AF2,B2)), SUM(N2),100000),        
+IF(AND($DI$2=1, SUM(R2)>IF($DA$2=1, AF2,B2)), SUM(R2),100000),        
+IF(AND($DJ$2=1, SUM(W2)>IF($DA$2=1, AF2,B2), V2=1), SUM(W2),100000),      
+IF(AND($DK$2=1, SUM(Y2)>IF($DA$2=1, AF2,B2), X2="yes"), SUM(Y2),100000)
+      )  = 100000,  0, 1)
