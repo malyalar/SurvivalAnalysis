@@ -14,3 +14,16 @@ IF(AND($DI$2=1, SUM(R2)>IF($DA$2=1, AF2,B2)), SUM(R2),100000),
 IF(AND($DJ$2=1, SUM(W2)>IF($DA$2=1, AF2,B2), V2=1), SUM(W2),100000),      
 IF(AND($DK$2=1, SUM(Y2)>IF($DA$2=1, AF2,B2), X2="yes"), SUM(Y2),100000)
       )  = 100000,  0, 1)
+      
+      
+//Don't create huge tables from scratch.
+//Be sure to press shift+enter, since this is an array formula.
+
+=CONCATENATE(TEXT(AVERAGEIF($CP$2:$CP$1064, "eccentric hypertrophy", $CR$2:$CR$1064), "0.00"), " ± ", TEXT(STDEV(IF($CP$2:$CP$1064="eccentric hypertrophy",$CR$2:$CR$1064)), "0.00"))
+
+
+//Tell if an event occurred BEFORE a particular date.
+//Variables of interest must be included manually.
+
+=IF(OR(AND(E2="yes", F2<B2),AND(I2="yes", J2<B2),AND(K2="yes", L2<B2),AND(O2="yes",P2<B2),AND(X2="yes", Y2<B2)), 1, 0)
+
