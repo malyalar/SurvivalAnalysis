@@ -1,0 +1,3 @@
+covariates <- c("Male", "AgeAtTx", "AgeAtBW", "ApoA1First", "ApoBFirst", "A1.B", "DManyTime", "sCr", "GFRmdrd", "RBS", "FBS", "TotalChol", "HDL", "LDL", "HDL.LDL", "TG", "NonHDLchol", "TcholHDLratio", "CRP", "MACR", "UricAcid","Uprot24h", "sAlbumin", "HbA1c100", "PTH", "VitD25", "SBP", "DBP", "height", "weight", "BMI", "waistSize", "hipSize", "w2hRatio", "smokerStatus", "graftType", "TransplantNumber")
+
+summary(coxph(Surv(survTime, survStatus)~sCr+GFRmdrd+FBS+TotalChol+HDL+LDL+MACR+sAlbumin+HbA1c100+VitD25+graftType+smokerStatus+w2hRatio+SBP, data=txdata))
