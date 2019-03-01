@@ -10,6 +10,12 @@ ggsurvplot(survfit(Surv(survTime, survStatus)~B.Med, data=txdataAPO2010), pval =
 
 coxph(Surv(survTimePTDM, SigPTDMs)~ApoA1First*StatinDose, data=txdataAPO2010)
 
+%----------------------------------
+% MULTIPLE NOT MULTIVARIATE COX REG
+%----------------------------------
+
+summary(coxph(Surv(survTimePTDM, SigPTDMs)~LDL+BMI+SBP+AgeAtBW+graftType+white+Tacrolimus+w2hRatio100+NCEPATPIII, data=txdata))
+
 %----------------------------------------
 % VISUALIZATION OF INTERACTION EFFECTS 3D
 %----------------------------------------
