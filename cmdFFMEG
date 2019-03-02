@@ -1,0 +1,11 @@
+# Actually totally unrelated to survival analysis
+
+
+FOR /F "tokens=*" %G IN ('dir /b *.mp4') DO ffmpeg -i "%G" -qscale 0  -r 24 "%~nG.mpeg"
+
+FOR /F "tokens=*" %G IN ('dir /b *.flac') DO ffmpeg -i "%G"  -ab 192k -map_metadata 0 -id3v2_version 3 "%~nG.mp3"
+
+
+sample module FX
+
+ffmpeg -i "sample module FX.mp4" -qscale 0  -r 24 "sample module FX.mpeg"
