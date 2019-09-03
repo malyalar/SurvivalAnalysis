@@ -1,4 +1,4 @@
-# Actually totally unrelated to survival analysis
+# These code snippets are totally unrelated to survival analysis, I just uploaded them here.
 
 
 FOR /F "tokens=*" %G IN ('dir /b *.mp4') DO ffmpeg -i "%G" -qscale 0  -r 24 "%~nG.mpeg"
