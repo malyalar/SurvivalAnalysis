@@ -13,7 +13,7 @@ The function provided within allows you to eaily input (with a 0 or 1) which adv
 
 
 ### Converting survival functions into publication-ready output
-While current ggtheme outputs generate beautfiful color graphs, few journals accept color figures without an extra charge to the author. Here are some ggtheme parameters that probably generate the style of figure that most epidemiology journals are looking for. Included underneath are the requisite risk and cumulative events tables that many journals look for as well.
+Included here are also some ggtheme parameters that probably generate the style of figure that most epidemiology journals are looking for. Included underneath are the requisite risk and cumulative events tables that many journals look for as well.
 <p>
 <img src="https://github.com/malyalar/SurvivalAnalysis/blob/master/excelFunctions/Time%20to%20MACE%2C%20RWT%20diagnosis.png" width=400>
 <img src="https://github.com/malyalar/SurvivalAnalysis/blob/master/excelFunctions/Time%20to%20MACE%2C%20LVH%20type.png" width=400>  
