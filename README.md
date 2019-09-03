@@ -3,7 +3,7 @@ A collection of R commands for typical epidemiological analyses and publication-
 
 ## The Problems and Solutions
 ### Converting adverse event date collections into interpretable survival data
-You have the following scenario. A massive excel file with hundreds of rows of patients. Tens of columns of event types. And a bunch of dates for when each date occurs, if at all. When conducting survival analysis, either Cox regression or Kaplan Meier, you need processed data. You need just survival time, and survival status. But how can you reconcile all the different event types together, in a way that allows you to easily experiment with which adverse events should be included in the model?
+Imagine the following: you have a massive excel file with hundreds of rows of patients. Tens of columns of event types. And a bunch of dates for when each date occurs, if at all. When conducting survival analysis, either Cox regression or Kaplan Meier, you need processed data. You need just survival time, and survival status. But how can you reconcile all the different event types together, in a way that allows you to easily experiment with which adverse events should be included in the model?
 
 <img src="https://github.com/malyalar/SurvivalAnalysis/blob/master/excelFunctions/Excel%20screenshot.png">
 
